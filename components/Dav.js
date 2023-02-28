@@ -6,55 +6,47 @@ import React, { useRef } from "react";
 import { useGLTF } from "@react-three/drei";
 
 export function Dav(props) {
-  const { nodes, materials } = useGLTF("/7D ROANO.gltf");
+  const { nodes, materials } = useGLTF("/8D ROANO.gltf");
   return (
     <group {...props} dispose={null}>
-      <group
-        position={[0.21, 0.1, -0.09]}
-        rotation={[Math.PI / 2, 0, 0]}
-        scale={0}
-      >
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes["TQ_ARD-geom003"].geometry}
-          material={materials["TQ_ARD_front.001"]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes["TQ_ARD-geom003_1"].geometry}
-          material={materials["TQ_ARD_back.002"]}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes["TQ_ARD-geom003_2"].geometry}
-          material={materials["TQ_ARD_edge.002"]}
-        />
-      </group>
-      <group position={[-0.02, 0, 0.01]}>
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes["TQ_ARD-geom"].geometry}
-          material={materials.TQ_ARD_front}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes["TQ_ARD-geom_1"].geometry}
-          material={materials.TQ_ARD_back}
-        />
-        <mesh
-          castShadow
-          receiveShadow
-          geometry={nodes["TQ_ARD-geom_2"].geometry}
-          material={materials.TQ_ARD_edge}
-        />
-      </group>
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["TQ_ARD-geom003"].geometry}
+        material={materials["TQ_ARD_front.001"]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["TQ_ARD-geom003_1"].geometry}
+        material={materials["TQ_ARD_back.002"]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["TQ_ARD-geom003_2"].geometry}
+        material={materials["TQ_ARD_edge.002"]}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["TQ_ARD-geom"].geometry}
+        material={materials.TQ_ARD_front}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["TQ_ARD-geom_1"].geometry}
+        material={materials.TQ_ARD_back}
+      />
+      <mesh
+        castShadow
+        receiveShadow
+        geometry={nodes["TQ_ARD-geom_2"].geometry}
+        material={materials.TQ_ARD_edge}
+      />
     </group>
   );
 }
 
-useGLTF.preload("/7D ROANO.gltf");
+useGLTF.preload("/8D ROANO.gltf");
